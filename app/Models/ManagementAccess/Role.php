@@ -14,7 +14,7 @@ class Role extends Model
     public $table = 'role';
 
     // this field must type date yyy-mm-dd hh-mm-ss
-    protected $date = [
+    protected $dates = [
         'created_at',
         'update_at',
         'deleted_at',
@@ -27,4 +27,13 @@ class Role extends Model
         'update_at',
         'deleted_at',
     ];
+    // 2 parameters (path model, field foreign keys)
+    public function permissionRole()
+    {
+        return $this->hasMany('app\Models\ManagementAccess\PermissionRole', 'role_id');
+    }
+    public function role()
+    {
+        return $this->hasMany('app\Models\ManagementAccess\RoleUser', 'role_id');
+    }
 }

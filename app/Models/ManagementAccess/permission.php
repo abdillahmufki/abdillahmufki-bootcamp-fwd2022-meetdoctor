@@ -14,7 +14,7 @@ class permission extends Model
     public $table = 'permission';
 
     // this field must type date yyy-mm-dd hh-mm-ss
-    protected $date = [
+    protected $dates = [
         'created_at',
         'update_at',
         'deleted_at',
@@ -27,4 +27,10 @@ class permission extends Model
         'update_at',
         'deleted_at',
     ];
+
+    // 2 parameters (path model, field foreign keys)
+    public function permissionRole()
+    {
+        return $this->hasMany('app\Models\ManagementAccess\PermissionRole', 'permission_id');
+    }
 }

@@ -14,7 +14,7 @@ class Consultation extends Model
     public $table = 'concultation';
 
     // this field must type date yyy-mm-dd hh-mm-ss
-    protected $date = [
+    protected $dates = [
         'created_at',
         'update_at',
         'deleted_at',

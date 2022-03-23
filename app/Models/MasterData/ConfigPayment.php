@@ -15,7 +15,7 @@ class ConfigPayment extends Model
     public $table = 'config_payment';
 
     // this field must type date yyy-mm-dd hh-mm-ss
-    protected $date = [
+    protected $dates = [
         'created_at',
         'update_at',
         'deleted_at',

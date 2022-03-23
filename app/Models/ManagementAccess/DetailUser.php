@@ -15,7 +15,7 @@ class DetailUser extends Model
     public $table = 'detail_user';
 
     // this field must type date yyy-mm-dd hh-mm-ss
-    protected $date = [
+    protected $dates = [
         'created_at',
         'update_at',
         'deleted_at',

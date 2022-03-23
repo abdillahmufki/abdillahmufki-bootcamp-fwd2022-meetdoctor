@@ -15,7 +15,7 @@ class TypeUser extends Model
     public $table = 'type_user';
 
     // this field must type date yyy-mm-dd hh-mm-ss
-    protected $date = [
+    protected $dates = [
         'created_at',
         'update_at',
         'deleted_at',

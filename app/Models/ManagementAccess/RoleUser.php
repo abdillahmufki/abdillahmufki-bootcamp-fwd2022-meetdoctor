@@ -14,7 +14,7 @@ class RoleUser extends Model
     public $table = 'role_user';
 
     // this field must type date yyy-mm-dd hh-mm-ss
-    protected $date = [
+    protected $dates = [
         'created_at',
         'update_at',
         'deleted_at',
@@ -28,4 +28,8 @@ class RoleUser extends Model
         'update_at',
         'deleted_at',
     ];
+    public function role()
+    {
+        return $this->belongsTo('app\Models\ManagementAccess\Role', 'role_id', 'id');
+    }
 }
