@@ -29,7 +29,7 @@ class permission extends Model
     ];
 
     // 2 parameters (path model, field foreign keys)
-    public function permissionRole()
+    public function permission_role()
     {
         return $this->hasMany('app\Models\ManagementAccess\PermissionRole', 'permission_id');
     }
