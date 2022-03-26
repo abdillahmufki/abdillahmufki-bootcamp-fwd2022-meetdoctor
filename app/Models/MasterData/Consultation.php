@@ -11,7 +11,7 @@ class Consultation extends Model
     // use HasFactory;
     use softDeletes;
 
-    public $table = 'concultation';
+    public $table = 'consultation';
 
     // this field must type date yyy-mm-dd hh-mm-ss
     protected $dates = [
