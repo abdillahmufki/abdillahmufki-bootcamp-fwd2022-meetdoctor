@@ -29,6 +29,8 @@ class PermissionRole extends Model
         'deleted_at',
     ];
 
+
+
     public function permission()
     {
         return $this->belongsTo('app\Models\ManagementAccess\Permission.', 'permission_id', 'id');

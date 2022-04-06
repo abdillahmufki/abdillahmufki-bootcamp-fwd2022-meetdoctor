@@ -17,13 +17,11 @@
 
     @include('components.frontsite.header')
     @yield('content')
-
     @include('components.frontsite.footer')
 
     @stack('before-script')
     @include('includes.frontsite.script')
     @stack('after-script')
-
     {{-- modals --}}
     {{-- if you have a modal, create here --}}
 
